@@ -399,18 +399,40 @@ body {
   }
 }
 /* تحسينات لأصغر شاشات الموبايل (أقل من 375px) */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
     /* تصغير حجم الخط العام */
-    :root {
-        font-size: 14px;
+.main-nav {
+        padding: 8px 5px !important; /* تقليل المسافات الجانبية */
+        flex-wrap: wrap; /* عشان لو المساحة منعتهم جنب بعض ينزلوا سطرين بنظام */
+        justify-content: center !important;
+        gap: 10px;
     }
 
-    /* ضبط الحاوية الرئيسية */
-    .container {
-        padding: 10px;
-        width: 95%;
+    .nav-links {
+        order: 2; /* يخلي اللينكات تحت */
+        width: 100%;
+        justify-content: center;
+        gap: 5px !important; /* تضيق المسافات بين الكلمات */
     }
 
+    .nav-logo {
+        order: 1; /* يخلي اللوجو (صفحة رحمة ودعاء) فوق وفي النص */
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .nav-item {
+        font-size: 11px !important; /* تصغير الخط عشان يكفي */
+        padding: 4px 8px !important;
+        white-space: nowrap; /* يمنع الكلمة تتقسم على سطرين */
+    }
+
+    /* لو فيه أيقونة مون (القمر) نصغرها شوية */
+    .nav-logo i {
+        width: 14px;
+        height: 14px;
+    }
     /* تصغير كارت القرآن */
     .quran-display {
         padding: 15px 10px;
