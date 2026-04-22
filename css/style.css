@@ -398,3 +398,67 @@ body {
     padding: 30px;
   }
 }
+/* تحسينات لأصغر شاشات الموبايل (أقل من 375px) */
+@media screen and (max-width: 375px) {
+    /* تصغير حجم الخط العام */
+    :root {
+        font-size: 14px;
+    }
+
+    /* ضبط الحاوية الرئيسية */
+    .container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    /* تصغير كارت القرآن */
+    .quran-display {
+        padding: 15px 10px;
+        min-height: auto;
+    }
+
+    /* تصغير حجم الآية عشان متخدش مساحة كبيرة */
+    .verse-text {
+        font-size: 1.2rem !important;
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+
+    /* ضبط أزرار التنقل (الصبر، الرحمة، النور) */
+    .tabs-container {
+        display: flex;
+        flex-wrap: wrap; /* يخلي الزراير تنزل تحت بعض لو المساحة ضيقة */
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .tab-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* ضبط زرار الاستماع */
+    .audio-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* ضبط الـ Grid (الخلق، العلم، الأثر) */
+    .info-grid {
+        grid-template-columns: 1fr; /* يخليهم فوق بعض بدل ما يكونوا جنب بعض */
+        gap: 10px;
+    }
+
+    .info-card {
+        padding: 10px;
+    }
+
+    /* تصغير الهيدر (الاسم والتاريخ) */
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .date-text {
+        font-size: 0.9rem;
+    }
+}
