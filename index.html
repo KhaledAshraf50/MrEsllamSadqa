@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مستر إسلام الحليفي | رحمة ودعاء</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="min-h-screen bg-background">
+      <section class="hero-section">
+        <div class="glow-effect"></div>
+        <div class="container relative">
+          <nav class="top-nav">
+            <span class="logo-badge">
+              <i data-lucide="moon" class="icon-sm"></i> صفحة رحمة ودعاء
+            </span>
+            <div class="nav-links">
+              <a href="#الذكرى">الذكرى</a>
+              <a href="#قرآن">قرآن</a>
+              <a href="#أدعية">أدعية</a>
+              <a href="#تسبيح">تسبيح</a>
+              <a href="#عمل-صالح">عمل صالح</a>
+            </div>
+          </nav>
+
+          <div id="الذكرى" class="hero-grid">
+            <div class="hero-text">
+              <p class="inna-lillah">
+                <i data-lucide="flame" class="icon-gold"></i> إنا لله وإنا إليه
+                راجعون
+              </p>
+              <h1 class="main-title">مستر إسلام الحليفي</h1>
+              <p class="dates">14 / 12 / 1996 — 22 / 4 / 2026</p>
+              <p class="bio">
+                كان شخص محترم جدًا وطيب، دايمًا بيتعامل معانا بذوق وهدوء. كنت
+                بحب طريقته في الشرح لأنه كان بيبسط كل حاجة وبيصبر علينا لحد ما
+                نفهم.
+              </p>
+              <div class="legacy-grid">
+                <div class="legacy-card">
+                  <span>العلم</span>
+                  <p>كان بيبسط الشرح</p>
+                </div>
+                <div class="legacy-card">
+                  <span>الخلق</span>
+                  <p>ذوق وهدوء واحترام</p>
+                </div>
+                <div class="legacy-card">
+                  <span>الأثر</span>
+                  <p>محبة باقية ودعاء</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-card-container">
+              <div class="memorial-card">
+                <i data-lucide="sparkles" class="icon-gold mb-4"></i>
+                <p class="quran-line">﴿ وَبَشِّرِ الصَّابِرِينَ ﴾</p>
+                <p class="dua-text">
+                  اللهم ارفع درجته في المهديين، واخلفه في عقبه في الغابرين،
+                  واغفر لنا وله يا رب العالمين.
+                </p>
+                <div class="daily-dua">
+                  <span class="label">دعوة اليوم</span>
+                  <p>اللهم اجعل قبره نورًا وضياءً وسعةً وسرورًا.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="قرآن" class="section-padding">
+        <div class="container">
+          <div class="section-header">
+            <p class="sub-title">آيات للسكينة</p>
+            <h2 class="title">قرآن كريم</h2>
+          </div>
+          <div class="verse-tabs" id="verse-tabs"></div>
+          <article class="quran-display">
+            <div class="audio-controls">
+              <button
+                id="play-audio-btn"
+                class="audio-btn"
+                title="استماع بصوت ياسر الدوسري"
+              >
+                <i data-lucide="volume-2"></i> استماع
+              </button>
+            </div>
+            <i data-lucide="book-open" class="icon-garden"></i>
+            <p id="active-verse-text" class="verse-text"></p>
+            <p id="active-verse-source" class="verse-source"></p>
+
+            <audio id="quran-player"></audio>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-padding pt-0">
+        <div class="container grid-3">
+          <article class="legacy-details col-span-2">
+            <i data-lucide="heart" class="icon-garden mb-4"></i>
+            <h2 class="title">أثره الطيب</h2>
+            <p class="legacy-para">
+              الله يرحمه ويغفر له، ويجعل كل اللي علمه لنا في ميزان حسناته. فعلاً
+              كان إنسان جميل وسيب أثر كويس فينا كلنا.
+            </p>
+            <div class="legacy-chips">
+              <div class="chip">
+                <i data-lucide="star"></i> كان صبورًا في الشرح
+              </div>
+              <div class="chip">
+                <i data-lucide="star"></i> كان هادئًا في التعامل
+              </div>
+              <div class="chip">
+                <i data-lucide="star"></i> كان محترمًا مع الجميع
+              </div>
+              <div class="chip"><i data-lucide="star"></i> كان أثره جميلًا</div>
+            </div>
+          </article>
+
+          <article id="تسبيح" class="tasbeeh-card">
+            <h2 class="title">تسبيح</h2>
+            <button class="tasbeeh-btn" onclick="incrementCounter()">
+              <span id="counter-num">0</span>
+              <span id="tasbeeh-phrase">أستغفر الله</span>
+            </button>
+            <div class="progress-bar"><div id="progress-fill"></div></div>
+            <button class="reset-btn" onclick="resetCounter()">
+              <i data-lucide="rotate-ccw"></i> تصفير العداد
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section id="أدعية" class="section-padding bg-soft">
+        <div class="container">
+          <div class="section-header flex-between">
+            <div>
+              <p class="sub-title">اللهم آمين</p>
+              <h2 class="title">أدعية بالرحمة والمغفرة</h2>
+            </div>
+            <i data-lucide="sun-medium" class="icon-gold big-sun"></i>
+          </div>
+          <div class="dua-grid" id="dua-grid"></div>
+        </div>
+      </section>
+
+      <section id="عمل-صالح" class="section-padding">
+        <div class="container grid-2">
+          <div class="deeds-info">
+            <h2 class="title-white">اعمل حاجة بسيطة واهدِ ثوابها</h2>
+            <p>
+              اختار عمل صالح، اقرأ دعاء، سبح، أو شارك الدعاء مع غيرك. ربنا يجعل
+              كل ده في ميزان حسناته.
+            </p>
+            <p class="quran-footer">
+              ﴿ رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا ﴾
+            </p>
+          </div>
+          <div class="deeds-grid" id="deeds-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js\Script.js"></script>
+  </body>
+</html>

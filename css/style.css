@@ -1,0 +1,400 @@
+:root {
+  --primary: #1a3c34;
+  --primary-foreground: #ffffff;
+  --gold: #d4a34d;
+  --mercy: #1a3c34;
+  --garden: #2d5a4c;
+  --background: #fdfcf9;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --secondary: #f1f5f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Tajawal", sans-serif;
+  line-height: 1.6;
+  color: var(--mercy);
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--primary);
+  color: white;
+  padding: 40px 0 80px;
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.glow-effect {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  background: rgba(212, 163, 77, 0.2);
+  filter: blur(80px);
+  border-radius: 50%;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.logo-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: end;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 15px 0;
+}
+.inna-lillah {
+  color: var(--gold);
+  font-weight: bold;
+}
+.dates {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+.bio {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.legacy-grid {
+  display: flex;
+  gap: 15px;
+}
+.legacy-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.legacy-card span {
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.memorial-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.quran-line {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.daily-dua {
+  background: rgba(45, 90, 76, 0.5);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* Quran Section */
+.section-padding {
+  padding: 80px 0;
+}
+.section-header {
+  margin-bottom: 40px;
+}
+.sub-title {
+  color: var(--garden);
+  font-weight: bold;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.verse-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.tab-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: white;
+}
+
+.quran-display {
+  background: #fff;
+  padding: 60px;
+  text-align: center;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.verse-text {
+  font-size: 2.5rem;
+  color: var(--mercy);
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+/* Tasbeeh */
+.tasbeeh-card {
+  background: var(--primary);
+  color: white;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+}
+.tasbeeh-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 30px 0;
+  background: #f1f5f9;
+  border: 5px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tasbeeh-btn:active {
+  transform: scale(0.95);
+}
+#counter-num {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+#tasbeeh-phrase {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#progress-fill {
+  height: 100%;
+  background: var(--gold);
+  width: 0%;
+  transition: 0.3s;
+}
+.reset-btn {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+/* Dua & Deeds */
+.bg-soft {
+  background: #f1f5f9;
+}
+.dua-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.dua-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+.dua-card:hover {
+  transform: translateY(-5px);
+}
+.copy-btn {
+  margin-top: 20px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: none;
+  cursor: pointer;
+  color: var(--garden);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.deeds-info {
+  background: var(--primary);
+  color: white;
+  padding: 40px;
+  border-radius: 30px;
+}
+.title-white {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.deeds-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.deed-btn {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+.deed-btn.checked {
+  background: var(--gold);
+  color: white;
+  border-color: var(--gold);
+}
+.check-circle {
+  width: 25px;
+  height: 25px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -20px;
+}
+
+.audio-btn {
+  background: var(--secondary);
+  border: 1px solid var(--gold);
+  color: var(--primary);
+  padding: 8px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.audio-btn:hover {
+  background: var(--gold);
+  color: white;
+}
+
+.icon-garden {
+  margin-top: 10px;
+}
+
+/* Helpers */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+.col-span-2 {
+  grid-column: span 2;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon-gold {
+  color: var(--gold);
+}
+.icon-garden {
+  color: var(--garden);
+  width: 40px;
+  height: 40px;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-grid,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .col-span-2 {
+    grid-column: span 1;
+  }
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .quran-display {
+    padding: 30px;
+  }
+}
